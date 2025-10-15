@@ -94,7 +94,7 @@ section h2 {
 
 #about-section {
     display: auto;
-    background: var(--pink);
+    background: linear-gradient(135deg, var(--light) 0%, var(--pink) 50%, var(--lightbrown) 100%);
     flex-direction: row; 
     gap: 10%;
 }
@@ -176,7 +176,7 @@ section h2 {
 }
 
 #product-section {
-  background-image: url('bg-flower2.png');
+  background: linear-gradient(120deg, var(--pink) 0%, var(--brown) 50%, var(--lightbrown) 100%);
   
 }
 
@@ -209,13 +209,14 @@ section h2 {
 }
 
 .flower-image {
-    padding: 10px 10px 10px;
+    padding: 20px 20px 20px;
     padding-bottom: auto;
     background: var(--light);
     border-radius: 5px;
     justify-content: center;
     box-shadow: 0 0 12px 0 rgba(0,0,0,1);
 }
+
 
 #left {
   opacity: 0;
@@ -228,7 +229,6 @@ section h2 {
   transform: translateX(100px);
   animation: right 2s ease-out forwards;
 }
-
 
 .flower-image h3{
   font-size: 24px;
@@ -250,7 +250,7 @@ section h2 {
 }
 
 #why-section {
-    background-image: url('bg-flower2.png');
+    background: linear-gradient(160deg, var(--light) 0%, var(--white) 40%, var(--lightbrown) 100%);
 }
 
 .why-container ul {
@@ -297,8 +297,7 @@ ul {
 
 
 #feedback-section {
-    background-image: url('bg-flower2.png');
-    padding: 40px 20px;
+    background: linear-gradient(145deg, var(--white) 0%, var(--pink) 60%, var(--light) 100%);
 }
 
 table {
@@ -361,7 +360,7 @@ table {
 }
 
 #contact-section {
-    background-image: url('bg-flower2.png');
+    background: linear-gradient(to top right, var(--lightbrown) 0%, var(--white) 50%, var(--pink) 100%);
 }
 
 #contact-section h2 {
@@ -629,8 +628,8 @@ footer {
         right: -6px;
         bottom: -6px;
         border-width: 3px; 
-        }
-
+    }
+    
 @media (min-width: 769px) and (max-width: 1200px) {
     #about-section {
         gap: 20px;
@@ -737,4 +736,4 @@ footer {
     .brand-name {
         font-size: 40px; 
     }
-}
+    }
