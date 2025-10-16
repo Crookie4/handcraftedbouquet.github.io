@@ -62,6 +62,8 @@ body {
 .header a:hover,
 .header a:focus {
     width: auto;
+    height: auto;
+    transform: translateY(-5px);
     border-bottom: 3px solid var(--dark);
     transition: 1s;
   
@@ -203,7 +205,7 @@ section h2 {
 .image-product {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 20px;
+    gap: 30px;
     width: auto;
     
 }
