@@ -6,51 +6,53 @@
     <meta name="description" content="Handcrafted fuzzy wire bouquets by Zianna Mnl in Quezon City. Order via social media.">
     <title>Handcrafted Bouquets</title>
     <link rel="stylesheet" href="flower.css">
-    <link rel="icon" href="orig-logo.jpg" type="image/jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header">
-        <nav class="nav-link">
-          <h1 class="nav-brand">
+    <nav class="nav"> 
+        <h1 class="nav-brand">
             &#127802; Zianna's Bouquet
-          </h1>
-            <a href="#about-section">
-              &#128161; About
-            </a>
-            <a href="#product-section">
-              &#128230; Product
-            </a>
-            <a href="#why-section">
-             &#10067; Why Us?
-            </a>
-            <a href="#feedback-section">
-             &#128221; Feedback
-            </a>
-            <a href="#contact-section">
-             	&#128222; Contact
-            </a>
-        </nav>
-    </header>
+        </h1>
+        <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('active')">
+        ☰
+       </button>
+        <ul class="nav-links">
+            <li><a href="#about-section">&#128161; About</a></li>
+            <li><a href="#product-section">&#128230; Product</a></li>
+            <li><a href="#why-section">&#10067; Why Us?</a></li>
+            <li><a href="#feedback-section">&#128221; Feedback</a></li>
+            <li><a href="#contact-section">&#128222; Contact</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
-
-        <section id="about-section">
-            <img class="logo" src="zianna-logo.png" alt="Zianna Mnl logo" loading="lazy">
-            <div class="about-content">
-                <span class="brand-name">
-                  Zianna Mnl Handcrafted Bouquets
-                  </span>
-                <div class="about-container">
-                <h3 class="tagline">When creativity clashes, magic happens. 💕
-                </h3>
-                <p>A small business in Quezon City specializing in handcrafted fuzzy wire bouquets, sold via Facebook and Instagram.</p>
-                <a href="https://www.instagram.com/zianna.mnl?igsh=bTFycWR2dnUwZzN3" class="order-btn" id="right">&#128717; Order Now</a>
-              </div>
-            </div>
-        </section>
+       <section id="about-section">
+    <div class="logo-container">
+        <img class="logo" src="zianna-logo.png" alt="Zianna Mnl logo" loading="lazy">
+        <audio id="myAudio">
+            <source src="Multo.mp3" type="audio/mp3">
+        </audio>
+        <button 
+            id="playPauseBtn" 
+            type="button" 
+            onclick="var x=document.getElementById('myAudio'); 
+                     if(x.paused){x.play(); this.textContent='Pause Audio';} 
+                     else{x.pause(); this.textContent='Play Audio';}">
+           &#127925; Play Audio
+        </button>
+    </div>
+    <div class="about-content">
+        <span class="brand-name">
+            Zianna Mnl Handcrafted Bouquets
+        </span>
+        <div class="about-container">
+            <h3 class="tagline">When creativity clashes, magic happens. 💕</h3>
+            <p>A small business in Quezon City specializing in handcrafted fuzzy wire bouquets, sold via Facebook and Instagram.</p>
+            <a href="https://www.instagram.com/zianna.mnl?igsh=bTFycWR2dnUwZzN3" class="order-btn" id="right">&#128722; Order Now</a>
+        </div>
+    </div>
+</section>
 
     
         <section id="product-section">
@@ -157,7 +159,7 @@
                 <li>
                   <img class="why-logo" src="affordable.png" alt="Affordable" loading="lazy" style="width: 100px; height:60px;">
                   <p>
-                    Affordable prices via social media orders.
+                     Affordable prices via social media orders.
                   </p>
                   </li>
             </ul>
@@ -232,7 +234,7 @@
               &#128233; Direct Message us on Facebook or Instagram @ZiannaMnl
             </p>
             <div>
-            <a href="https://www.facebook.com/ziannamnl">
+            <a href="https://www.facebook.com/ziannamnl/?_rdr">
               <img src="facebook-logo.png" alt="Facebook">
             </a>
             </div>
@@ -250,14 +252,14 @@
 
     </main>
     
-    <script>
-    const navLinks = document.querySelectorAll(".nav-link a");
+       <script>
+    const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             const targetId = link.getAttribute("href");
             const targetSection = document.querySelector(targetId);
             if (targetSection) {
-                const aniElements = targetSection.querySelectorAll(".logo, .about-content, #left, #right, h2, .product-section, .product-text, ul, table, .contact-container, .copyright");
+                const aniElements = targetSection.querySelectorAll(".logo, .about-content, #left, #right, h2, .product-section, .product-text, table, .contact-container, .copyright, .why-container, #playPauseBtn");
                 aniElements.forEach(el => {
                     el.style.animation = "none";
                     void el.offsetWidth;
@@ -266,6 +268,8 @@
             }
         });
     });
+  
 </script>
+
 </body>
 </html>
