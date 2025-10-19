@@ -132,7 +132,9 @@ section h2 {
 }
 
 .about-container p {
-    color: var(--dark);
+    color: var(--light);
+    -webkit-text-stroke: 1px;
+    text-shadow: 4px 1px 8px var(--dark);
     font-size: 26px;
     font-weight: bold;
     text-align: justify;
@@ -152,7 +154,10 @@ section h2 {
     font-weight: bolder;
     font-style: italic;
     margin-bottom: 15px;
-    color: var(--dark);
+    color: var(--light);
+    -webkit-text-stroke: 1px;
+    text-shadow: 4px 1px 8px var(--dark);
+     
 }
 
 .about-content .order-btn {
@@ -182,7 +187,7 @@ section h2 {
 }
 
 #product-section {
-  background: linear-gradient(120deg, var(--pink) 0%, var(--brown) 50%, var(--lightbrown) 100%);
+  background: lin, var(--pink) 0%, var(--brown) 50%, var(--lightbrown) 100%);
   
 }
 
