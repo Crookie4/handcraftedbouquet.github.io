@@ -96,7 +96,10 @@ section h2 {
 
 #about-section {
     display: auto;
-    background: linear-gradient(135deg, var(--light) 0%, var(--pink) 50%, var(--lightbrown) 100%);
+    background-image: url('Sakura.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     flex-direction: row; 
     gap: 10%;
 }
