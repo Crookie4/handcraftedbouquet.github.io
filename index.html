@@ -27,8 +27,8 @@
         </ul>
     </nav>
 </header>
-    <main>
-       <section id="about-section">
+<main>
+   <section id="about-section">
     <div class="logo-container">
         <img class="logo" src="zianna-logo.png" alt="Zianna Mnl logo" loading="lazy">
         <audio id="myAudio">
@@ -41,16 +41,22 @@
              if(x.paused){
                  x.play(); 
                  this.textContent='&#9208; Pause Music';
-                 this.style.backgroundImage = 'url(\'COJPause.png\')'; this.style.border='2px solid #f4f4f4';
+                 this.style.backgroundImage = 'url(\'COJPause.png\')'; this.style.border='2px solid #36393f';
              } 
              else{
                  x.pause(); 
                  this.textContent='&#127925; Play Music';
-                 this.style.backgroundImage = 'url(\'MultoPlay.png\')'; this.style.border='2px solid #36393f';
+                 this.style.backgroundImage = 'url(\'MultoPlay.png\')'; this.style.border='2px solid #f4f4f4';
              }">
    &#127925; Play Music
 </button>
-
+   <button id="theme-toggle" onclick="
+    const button = document.getElementById('theme-toggle');
+    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    button.innerText = newTheme === 'dark' ? '&#x1F31E; Light Mode' : '&#x1F31C; Dark Mode';
+  ">&#x1F31C; Dark Mode</button>
     </div>
     <div class="about-content">
         <span class="brand-name">
@@ -58,7 +64,7 @@
         </span>
         <div class="about-container">
             <h3 class="tagline">When creativity clashes, magic happens. 💕</h3>
-            <p>A small business in Quezon City specializing in handcrafted fuzzy wire bouquets, sold via Facebook and Instagram.</p>
+            <p class="about-text">A small business in Quezon City specializing in handcrafted fuzzy wire bouquets, sold via Facebook and Instagram.</p>
             <a href="https://www.instagram.com/zianna.mnl?igsh=bTFycWR2dnUwZzN3" class="order-btn" id="right">&#128722; Order Now</a>
         </div>
     </div>
@@ -264,14 +270,14 @@
 
     </main>
     
-       <script>
+  <script>
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             const targetId = link.getAttribute("href");
             const targetSection = document.querySelector(targetId);
             if (targetSection) {
-                const aniElements = targetSection.querySelectorAll(".logo, .about-content, #left, #right, h2, .product-section, .product-text, table, .contact-container, .copyright, .why-container, #playPauseBtn");
+                const aniElements = targetSection.querySelectorAll(".logo, .about-content, #left, #right, h2, .product-section, .product-text, table, .contact-container, .copyright, .why-container, #playPauseBtn, #theme-toggle");
                 aniElements.forEach(el => {
                     el.style.animation = "none";
                     void el.offsetWidth;
