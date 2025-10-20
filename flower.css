@@ -243,23 +243,38 @@ h2 {
 }
 
 .product-text {
-    background: var(--lightbrown);
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: left 2s ease-out forwards;
+}
+
+.product-text {
+    background: var(--white);
+    color: var(--dark);
     border-left: 1px solid var(--dark);
     border-width: 10px;
     border-radius: 10px;
     font-weight: bold;
     padding: 40px;
-    width: 70%;
+    min-width: 300px;
+    max-width: 1000px;
     font-size: 24px;
-    font-style: justify;
+    justify-content: justify;
     margin-bottom: 20px;
     word-spacing: 1px;
     letter-spacing: 1px;
-    line-height: 2.5;
-    opacity: 0;
-    transform: translateX(-100px);
-    animation: left 2s ease-out forwards;
-    box-shadow: 0 0 12px 0 rgba(0,0,0,1)
+    line-height: 1.5;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,1);
+}
+
+.product-text:hover {
+    transform: translateY(-10px);
+    transition: all 1s ease;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    color: var(--white);
+    background: var(--dark);
+    border-left: 1px solid var(--white);
+    border-width: 10px;
 }
 
 .image-product {
@@ -315,50 +330,56 @@ h2 {
 }
 
 #why-section {
-    background: linear-gradient(160deg, var(--light) 0%, var(--white) 40%, var(--lightbrown) 100%);
-}
-
-.why-container ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  list-style: none;
-  font-size: 1.3rem;
-  font-weight: bold;
-  font-style: justify;
-  text-align: center;
-  height: 200px;
-  width: 350px;
-  
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--light);
 }
 
 .why-container {
-  opacity: 0;
-  transform: translateX(-100px);
-  animation: left 2s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: left 2s ease-out forwards;
+}
+
+.why-container ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out 0.3s backwards;
 }
 
 .why-container li {
-    padding: 10px 20px;
-    background: var(--lightbrown);
+    flex: 1;
+    min-width: 250px;
+    max-width: 320px;
+    background: var(--white);
+    padding: 2rem 1.5rem;
     border-radius: 20px;
-    border-left: 1px solid var(--dark);
-    border-width: 10px;
-    box-shadow: 
-    0 0 6px rgba(0,0,0,1),
-    0 0 12px rgba(0,0,0,1);
-    position: auto;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
 }
 
-.why-container img {
-    margin-bottom: 30px;
-    object-fit: contain;
-    height: 100px;
-    width: 60px;
-    display: auto;
-    margin: 0 auto 10px;
-    justify-content: center;
-    cursor: pointer;
+.why-container li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    background: var(--pink);
+    border: 3px solid var(--white);
+}
+
+.why-logo {
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.why-container p {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--dark);
+    line-height: 1.8;
 }
 
 
@@ -616,8 +637,8 @@ footer {
 
     section {
         padding: 20px 10px; 
-        min-height: 150vh;
-        max-height: 200vh auto;
+        min-height: 150vh; 
+        max-height: auto;
         overflow: auto;
     }
 
@@ -626,7 +647,7 @@ footer {
     }
 
     .brand-name {
-      font-size: 30px;
+      font-size: 24px;
     }
 
     .tagline {
@@ -638,9 +659,13 @@ footer {
     }
 
     .product-text {
-        width: 100%; 
-        padding: 15px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 400px;
+        padding: 1.5rem;
     }
+    
+    
 
     .image-product {
         grid-template-columns: repeat(2, 1fr); 
@@ -657,23 +682,29 @@ footer {
         max-width: 100%;
     }
 
-    #why-section ul {
-        grid-template-columns: 1fr; 
-        width: auto; 
-        height: auto;
-        gap: 10px;
+   #why-section {
+        padding: 3rem 1rem;
     }
 
-    #why-section li {
-        padding: 20px; 
-        margin: 5px;
-        text-align: center; 
+    #why-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
 
-    .why-logo img,
-    #why-section li img {
-        width: 30px; 
-        height: 30px;
+    .why-container ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .why-container li {
+        width: 100%;
+        max-width: 400px;
+        padding: 1.5rem;
+    }
+
+    .why-container p {
+        font-size: 1rem;
     }
 
 
