@@ -616,7 +616,8 @@ footer {
 
     section {
         padding: 20px 10px; 
-        min-height: 150vh; 
+        min-height: 150vh;
+        max-height: 200vh auto;
         overflow: auto;
     }
 
