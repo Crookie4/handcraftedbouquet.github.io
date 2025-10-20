@@ -108,13 +108,20 @@ h2 {
 #about-section {
     display: flex;
     flex-wrap: wrap;
-    /*background: linear-gradient(135deg, var(--light) 0%, var(--pink) 50%, var(--lightbrown) 100%);*/
     background-image: url('Sakura.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     flex-direction: row; 
     gap: 20px;
+}
+
+.logo-container img:hover {
+  opacity: 1;
+  animation: spin 1s linear forwards; 
+  transform: rotateY(180deg);
+  transition: all 1s ease;
+  background: var(--white);
 }
 
 .logo-container {
@@ -124,7 +131,7 @@ h2 {
     gap: 10px;
 }
 
-#about-section .logo {
+.logo {
     border: 5px solid var(--white);
     background: transparent;
     width: 100%;
@@ -139,7 +146,7 @@ h2 {
         0 0 24px 0 black;
 }
 
-#about-section audio {
+audio {
     max-width: 500px; 
 }
 
@@ -149,7 +156,7 @@ h2 {
   animation: left 2s ease-out forwards;
 }
 
-#about-section #playPauseBtn {
+#playPauseBtn {
     background: var(--white);
     color: var(--dark);
     border: 2px solid var(--dark);
@@ -163,8 +170,8 @@ h2 {
     margin-top: 40px;
 }
 
-#about-section #playPauseBtn:hover,
-#about-section #playPauseBtn:focus {
+#playPauseBtn:hover,
+#playPauseBtn:focus {
     background: var(--dark);
     color: var(--white);
     border: 3px solid var(--white);
@@ -191,7 +198,7 @@ h2 {
     text-align: justify;
 }
 
-.about-content .brand-name {
+.brand-name {
     font-weight: 1000;
     font-size: 60px;
     color: var(--light);
@@ -210,7 +217,7 @@ h2 {
     text-shadow: 4px 1px 8px var(--dark);
 }
 
-.about-content .order-btn {
+.order-btn {
     display: inline-block;
     background: var(--brown);
     color: var(--dark);
@@ -512,6 +519,11 @@ footer {
     opacity: 0;
     transform: scale(0.5);
     animation: pop 2s ease-out forwards;
+}
+
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
 }
 
 @keyframes pop { 
