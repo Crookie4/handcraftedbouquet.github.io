@@ -93,17 +93,21 @@ section {
 
 h2 {
     display: auto;
-    font-size: 40px; 
-    margin-bottom: 10px;
-    color: var(--pink);
+    font-size: 50px;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
     text-align: center;
+    color: var(--dark);
+    -webkit-text-stroke: 1px;
     text-shadow: 
-        0 0 3px rgba(0,0,0,1),
-        0 0 6px rgba(0,0,0,1),
-        0 0 9px rgba(0,0,0,1);
+    -1px -1px 0 var(--white),
+     1px -1px 0 var(--white),
+    -1px  1px 0 var(--white),  
+     1px  1px 0 var(--white);
     transform: scale(0.5);
     animation: pop 2s ease-out forwards;
 }
+
 
 #about-section {
     display: flex;
@@ -272,11 +276,10 @@ audio {
     letter-spacing: 1px;
     line-height: 1.5;
     box-shadow: 0 0 12px 0 rgba(0,0,0,1);
+    transition: all 0.4s ease;
 }
 
-.product-text:hover {
-    transform: translateY(-10px);
-    transition: all 1s ease;
+.product-container p:hover {
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
     color: var(--white);
     background: var(--dark);
@@ -364,17 +367,20 @@ audio {
     min-width: 250px;
     max-width: 320px;
     background: var(--white);
+    border-left: 10px solid var(--dark);
     padding: 2rem 1.5rem;
     border-radius: 20px;
     box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
 }
 
+
 .why-container li:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
-    background: var(--pink);
-    border: 3px solid var(--white);
+    color: var(--white);
+    background: var(--dark);
+    border-left: 10px solid var(--white);
 }
 
 .why-logo {
@@ -385,9 +391,9 @@ audio {
 .why-container p {
     font-weight: bold;
     font-size: 1rem;
-    color: var(--dark);
-    line-height: 1.8;
+    line-height: 1.5;
 }
+
 
 
 #feedback-section {
@@ -406,10 +412,6 @@ table {
     animation: pop 2s ease-out forwards;
   
 }
-
-#feedback-section h2 {
-    margin-bottom: 30px;
-}    
 
 thead {
     background: var(--brown);
@@ -470,16 +472,23 @@ td[data-label="Feedback"] {
 .contact-container {
   margin: 0 auto;
   max-width: 600px;
-  background: var(--lightbrown);
+  background: var(--white);
   box-shadow: 
   0 0 3px rgba(0,0,0,1),
   0 0 9px rgba(0,0,0,1),
   0 0 12px rgba(0,0,0,1);
-  border-radius: 20px;
+  border-radius: 5px;
   opacity: 0;
   transform: scale(0.5);
   animation: pop 2s ease-out forwards;
 }
+
+.contact-container:hover {
+  transition: all 0.4s ease;
+  color: var(--white);
+  background: var(--dark);
+}
+
 
 .contact-container p {
   text-align: center;
@@ -654,7 +663,7 @@ footer {
         overflow: auto;
     }
 
-    section h2,{
+    h2 {
         font-size: 24px; 
     }
 
@@ -680,18 +689,26 @@ footer {
     
 
     .image-product {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px;
     }
 
     .flower-image {
         padding: 20px; 
     }
+    
+    .flower-image h3 {
+      font-size: 18px;
+    }
+    
+    .flower-image p {
+      font-size: 14px;
+    }
 
     .flower-image img {
-        width: 150px; 
-        height: 150px;
-        max-width: 100%;
+        width: 200px; 
+        height: 200px;
+        max-width: auto;
     }
 
    #why-section {
