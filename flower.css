@@ -161,8 +161,12 @@ audio {
 }
 
 #playPauseBtn {
-    background: var(--white);
-    color: var(--dark);
+    background: url('MultoPlay.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: var(--white);
+    text-shadow: 0 0 -1px var(--white);
     border: 2px solid var(--dark);
     min-width: 150px;
     min-height: 50px;
@@ -176,7 +180,10 @@ audio {
 
 #playPauseBtn:hover,
 #playPauseBtn:focus {
-    background: var(--dark);
+    background: url('COJPause.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     color: var(--white);
     border: 3px solid var(--white);
 }
@@ -299,7 +306,39 @@ audio {
     padding-bottom: auto;
     background: var(--light);
     border-radius: 5px;
-    box-shadow: 0 0 12px 0 rgba(0,0,0,1);
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+}
+
+.flower-image:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.flower-image img {
+   min-width: 200px;
+   min-height: 100px;
+   transition: all 0.4s ease;
+   transform: scale(0.9);
+}
+
+.flower-image img:hover,
+.flower-image img:focus {
+    transform: scale(1.1); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.flower-image h3 {
+  margin-top: 0.5rem;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.flower-image p {
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  margin-left: 3px;
 }
 
 
@@ -315,29 +354,6 @@ audio {
   animation: right 2s ease-out forwards;
 }
 
-.flower-image h3{
-  font-size: 24px;
-  text-align: center;
-  font-weight: bolder;
-}
-
-.flower-image p {
-  font-size: 20px;
-  text-align: left;
-  font-weight: bold;
-  margin-left: 3px;
-}
-
-.flower-image:hover {
-    transform: translateY(-10px) rotate(2deg);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.flower-image img:hover,
-.flower-image img:focus {
-    transform: scale(1.1); 
-    transition: 1s;
-}
 
 #why-section {
     padding: 4rem 2rem;
@@ -359,7 +375,6 @@ audio {
     list-style: none;
     max-width: 1200px;
     margin: 0 auto;
-    animation: fadeIn 1s ease-out 0.3s backwards;
 }
 
 .why-container li {
@@ -414,7 +429,7 @@ table {
 }
 
 thead {
-    background: var(--brown);
+    background: var(--white);
     color: var(--dark);
 }
 
@@ -440,12 +455,12 @@ tbody tr {
 
 tbody tr:hover {
     transform: translateX(10px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
 }
 
 td {
     padding: 1.5rem;
-    border-bottom: 2px solid var(--lightbrown);
+    border-bottom: 2px solid var(--eh);
 }
 
 td[data-label="Name"] {
@@ -766,7 +781,7 @@ footer {
     }
 
     td[data-label="Name"] {
-        background: var(--brown);
+        background: var(--white);
         width: 100%;
     }
           

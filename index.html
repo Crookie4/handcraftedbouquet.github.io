@@ -34,13 +34,22 @@
             <source src="Multo.mp3" type="audio/mp3">
         </audio>
         <button 
-            id="playPauseBtn" 
-            type="button" 
-            onclick="var x=document.getElementById('myAudio'); 
-                     if(x.paused){x.play(); this.textContent='Pause Audio';} 
-                     else{x.pause(); this.textContent='Play Audio';}">
-           &#127925; Play Audio
-        </button>
+    id="playPauseBtn" 
+    type="button" 
+    onclick="var x=document.getElementById('myAudio'); 
+             if(x.paused){
+                 x.play(); 
+                 this.textContent='&#9208; Pause Music';
+                 this.style.backgroundImage = 'url(\'COJPause.png\')'; this.style.border='2px solid #f4f4f4';
+             } 
+             else{
+                 x.pause(); 
+                 this.textContent='&#127925; Play Music';
+                 this.style.backgroundImage = 'url(\'MultoPlay.png\')'; this.style.border='2px solid #36393f';
+             }">
+   &#127925; Play Music
+</button>
+
     </div>
     <div class="about-content">
         <span class="brand-name">
