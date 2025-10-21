@@ -882,7 +882,9 @@ footer {
     }
 
     .flower-image img {
-        width: 200px; 
+        max-height: auto;
+        max-width: auto;
+        width: 100%; 
         height: 200px;
         max-width: auto;
     }
