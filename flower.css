@@ -12,6 +12,19 @@
      .header {
        background: var(--dark);
      }
+    
+     .nav-links a {
+       color: var(--white);
+     }
+     
+       .nav-links a:hover,
+       .nav-links a:focus {
+        transform: translateY(-3px);
+        transition: all 0.5s ease;
+        color: var(--white);
+        background: var(--dark);
+        border-bottom: 5px solid var(--white);
+       }
      
      .nav-brand {
        color: var(--white);
@@ -115,6 +128,7 @@
         }
         .nav-links {
           background: var(--dark);
+          color: var(--white);
         }
         .nav-links a {
         background: var(--dark);
@@ -169,6 +183,7 @@ body {
 
 .header {
     background: var(--white);
+    border-bottom: 5px solid var(--dark);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
