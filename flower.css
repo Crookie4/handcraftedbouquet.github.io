@@ -61,10 +61,20 @@
      }
      .flower-image {
        background: var(--dark);
-       box-shadow: 0 0 6px var(--white);
+       box-shadow: 0 0 12px var(--white);
      }
+  
+     .flower-image:hover {
+       background: transparent;
+     }
+     
      .flower-image p, h3 {
        color: var(--white);
+     }
+     
+     .flower-image img:hover
+     .flower-image img:focus {
+       box-shadow: 0 0 12px var(--white);
      }
      
      .menu-toggle {
@@ -455,15 +465,17 @@ h2 {
 }
 
 .flower-image {
-    padding: 20px 20px 20px;
+    padding: 25px 25px 25px;
     padding-bottom: auto;
-    background: var(--light);
+    background: var(--white);
     border-radius: 5px;
+    box-shadow: 0 0 40px var(--dark);
     transition: all 0.5s ease;
 }
 
 .flower-image:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    box-shadow: 0 0 40px var(--dark);
 }
 
 .flower-image img {
@@ -474,13 +486,15 @@ h2 {
     height: 230px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: all 1s ease;
 }
 
 .flower-image img:hover,
 .flower-image img:focus {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 0 40px var(--dark);
 }
 
 .flower-image h3 {
