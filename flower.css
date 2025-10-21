@@ -487,13 +487,13 @@ h2 {
   margin-top: 0.5rem;
   font-size: 24px;
   text-align: center;
-  font-weight: bolder;
+  font-weight: 1000;
 }
 
 .flower-image p {
   font-size: 20px;
-  text-align: left;
-  font-weight: bold;
+  text-align: center;
+  font-weight: 600;
   margin-left: 3px;
 }
 
