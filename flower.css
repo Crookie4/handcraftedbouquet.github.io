@@ -167,7 +167,7 @@ body {
 .nav {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -454,7 +454,10 @@ h2 {
 }
 
 .flower-image img {
-    width: 230px;
+    justify-content: center;
+    max-height: auto;
+    max-width: auto;
+    width: 100%;
     height: 230px;
     object-fit: cover;
     border-radius: 10px;
