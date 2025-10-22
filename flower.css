@@ -154,7 +154,14 @@
         color: var(--white);
         background: var(--dark);
         border-bottom: 5px solid var(--white);
+       }
      }
+     @media (min-width: 769px) and (max-width: 1200px) {
+     #product-section, #why-section,
+     #feedback-section, #contact-section {
+       background: linear-gradient(135deg, var(--dark) 0%, var(--dark) 50%, var(--lightbrown) 100%);
+       background-attachment: fixed;
+      }
      }
      
      .contact-container {
@@ -223,10 +230,6 @@ body {
     border-radius: 1rem;
 }
 
-.nav {
-    overflow: auto;
-}
-
 .nav-links a {
     display: inline-block;
     color: var(--dark);
@@ -234,16 +237,17 @@ body {
     font-weight: 1000;
     padding: 0.5rem 1rem;
     transition: transform 0.28s ease, border-color 0.28s ease;
-    border-bottom: 5px solid transparent;
+   border-bottom: 5px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
     transform: translateY(-5px);
-    border-bottom-color: var(--dark);
+   border-bottom-color: var(--dark);
 }
 
 section {
+    overflow: hidden;
     height: auto;
     min-height: 100vh; 
     padding: 60px; 
@@ -307,7 +311,7 @@ h2 {
     border: 2px solid var(--dark);
 }
 
-.logo-container img:hover {
+.logo:hover {
   opacity: 1;
   animation: spin 1s linear forwards; 
   transform: rotateY(180deg);
