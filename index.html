@@ -4,201 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Handcrafted fuzzy wire bouquets by Zianna Mnl in Quezon City. Order via social media.">
-    <title>Handcrafted Bouquets</title>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Handcrafted Bouquets - Zianna Mnl</title>
     <link rel="stylesheet" href="flower.css">
     <link rel="icon" href="orig-logo.jpg" type="image/jpg">
+    <link rel="preload" as="image" href="zianna-logo.png">
+    <link rel="preload" as="image" href="Sakura.gif">
 </head>
 <body>
-
     <header class="header">
-    <nav class="nav"> 
-        <h1 class="nav-brand">
-            &#127802; Zianna's Bouquet
-        </h1>
-        <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('active')">
-        ☰
-       </button>
-        <ul class="nav-links">
-            <li><a href="#about-section">&#128161; About</a></li>
-            <li><a href="#product-section">&#128230; Product</a></li>
-            <li><a href="#why-section">&#10067; Why Us?</a></li>
-            <li><a href="#feedback-section">&#128221; Feedback</a></li>
-            <li><a href="#contact-section">&#128222; Contact</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-   <section id="about-section">
-    <div class="logo-container">
-        <img class="logo" src="zianna-logo.png" alt="Zianna Mnl logo" loading="lazy">
-        <audio id="myAudio">
-            <source src="Multo.mp3" type="audio/mp3">
-        </audio>
-        <button 
-    id="playPauseBtn" 
-    type="button" 
-    onclick="var x=document.getElementById('myAudio'); 
-             if(x.paused){
-                 x.play(); 
-                 this.textContent='&#9208; Pause Music';
-                 this.style.backgroundImage = 'url(\'COJPause.png\')'; this.style.border='2px solid #36393f';
-             } 
-             else{
-                 x.pause(); 
-                 this.textContent='&#127925; Play Music';
-                 this.style.backgroundImage = 'url(\'MultoPlay.png\')'; this.style.border='2px solid #f4f4f4';
-             }">
-   &#127925; Play Music
-</button>
-   <button id="theme-toggle" onclick="
-    const button = document.getElementById('theme-toggle');
-    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    button.innerText = newTheme === 'dark' ? '&#x1F31E; Light Mode' : '&#x1F31C; Dark Mode';
-  ">&#x1F31C; Dark Mode</button>
-    </div>
-    <div class="about-content">
-      <div class="about-container">
-        <span class="brand-name">
-            Zianna Mnl Bouquets
-        </span>
-            <h3 class="tagline">When creativity clashes, magic happens. 💕</h3>
-            <p class="about-text">A small business in Quezon City specializing in handcrafted fuzzy wire bouquets, sold via Facebook and Instagram.</p>
-            <a href="https://www.instagram.com/zianna.mnl?igsh=bTFycWR2dnUwZzN3" class="order-btn" id="right">&#128722; Order Now</a>
-        </div>
-    </div>
-</section>
+        <nav class="nav"> 
+            <h1 class="nav-brand">
+                &#127802; Zianna's Bouquet
+            </h1>
+            <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('active')">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#product-section">Product</a></li>
+                <li><a href="#why-section">Why Us?</a></li>
+                <li><a href="#feedback-section">Feedback</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-section">
+            <div class="logo-container">
+                <img class="logo" src="zianna-logo.png" alt="Zianna Mnl logo" loading="lazy">
+                <audio id="myAudio">
+                    <source src="Multo.mp3" type="audio/mp3">
+                </audio>
+                <button 
+                    id="playPauseBtn" 
+                    type="button" 
+                    onclick="var x=document.getElementById('myAudio'); 
+                             if(x.paused){
+                                 x.play(); 
+                                 this.textContent='Pause Music';
+                                 this.style.backgroundImage = 'url(\'COJPause.png\')'; 
+                                 this.style.border='2px solid #36393f';
+                             } 
+                             else{
+                                 x.pause(); 
+                                 this.textContent='Play Music';
+                                 this.style.backgroundImage = 'url(\'MultoPlay.png\')'; 
+                                 this.style.border='2px solid #f4f4f4';
+                             }">Play Music
+                </button>
+                <button id="theme-toggle" onclick="
+                    const button = document.getElementById('theme-toggle');
+                    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    button.innerText = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+                ">Dark Mode</button>
+            </div>
+            <div class="about-content">
+                <div class="about-container">
+                    <span class="brand-name">
+                        Zianna Mnl Bouquets
+                    </span>
+                    <h3 class="tagline">When creativity clashes, magic happens. 💕</h3>
+                    <p class="about-text">A small business in Quezon City specializing in handcrafted fuzzy wire bouquets, sold via Facebook and Instagram.</p>
+                    <a href="https://www.instagram.com/zianna.mnl?igsh=bTFycWR2dnUwZzN3" class="order-btn" id="right" target="_blank" rel="noopener noreferrer">Order Now</a>
+                </div>
+            </div>
+        </section>
+
         <section id="product-section">
             <h2>What We Sell</h2>
             <div class="product-container">
-            <p class="product-text">
-               &#x1F9F5; Fuzzy wire bouquets: Handcrafted from pipe cleaners in various colors and sizes.
-              <br><br>
-                &#129526; Satin Fabric Flowers: Realistic and elegant additions to your collection.
-            </p>
+                <p class="product-text">
+                    <b>Fuzzy wire bouquets</b><br>
+                    Handcrafted from pipe cleaners in various colors and sizes.
+                </p>
+                <p class="product-text">
+                    <b>Satin Fabric Flowers</b><br>
+                    Realistic and elegant additions to your collection.
+                </p>
             </div>
             <div class="image-product"> 
-                <div class="flower-image"  id="left">
+                <div class="flower-image" id="left">
                     <img src="flower1.jpeg" alt="Single Bouquet" loading="lazy">
                     <div class="child">
-                    <h3>
-                      Single Bouquet
-                    </h3>
-                    <p>
-                      Single Flower Bouquet
-                    </p>
+                        <h3>Single Bouquet</h3>
+                        <p>Single Flower Bouquet</p>
+                        <span class="flower-prices">₱ 250</span>
                     </div>
                 </div>
                 <div class="flower-image" id="left">
                     <img src="flower2.jpeg" alt="Mini Bouquet" loading="lazy">
                     <div class="child">
-                    <h3>
-                      Mini bouquet
-                    </h3>
-                    <p>
-                      Mini Flower bouquet
-                    </p>
+                        <h3>Mini bouquet</h3>
+                        <p>Mini Flower bouquet</p>
+                        <span class="flower-prices">₱ 150</span>
                     </div>
                 </div>
                 <div class="flower-image" id="right">
                     <img src="flower3.jpeg" alt="Mini Single Bouquet" loading="lazy">
                     <div class="child">
-                    <h3>
-                      Mini Single Bouquet
-                    </h3>
-                    <p>
-                      Mini Single Flower Bouquet
-                    </p>
+                        <h3>Mini Single Bouquet</h3>
+                        <p>Mini Single Flower Bouquet</p>
+                        <span class="flower-prices">₱ 150</span>
                     </div>
                 </div>
                 <div class="flower-image" id="right">
                     <img src="flower4.jpeg" alt="Mini Bouquet" loading="lazy">
                     <div class="child">
-                    <h3>
-                      Mini Bouquet
-                    </h3>
-                    <p>
-                      Mini Flower Bouquet
-                    </p>
+                        <h3>Mini Bouquet</h3>
+                        <p>Mini Flower Bouquet</p>
+                        <span class="flower-prices">₱ 150</span>
                     </div>
                 </div>
                 <div class="flower-image" id="left">
                     <img src="flower5.jpeg" alt="Petite Bouquet" loading="lazy">
                     <div class="child">
-                    <h3>
-                      Petite Bouquet
-                    </h3>
-                    <p>
-                      Petite Flower Bouquet
-                    </p>
+                        <h3>Petite Bouquet</h3>
+                        <p>Petite Flower Bouquet</p>
+                        <span class="flower-prices">₱ 200</span>
                     </div>
                 </div>
                 <div class="flower-image" id="left">
                     <img src="flower6.jpeg" alt="Mini Dual Bouquet" loading="lazy">
                     <div class="child">
-                    <h3>
-                      Mini Dual Bouquet
-                    </h3>
-                    <p>
-                      Mini Dual Flower Bouquet
-                    </p>
+                        <h3>Mini Dual Bouquet</h3>
+                        <p>Mini Dual Flower Bouquet</p>
+                        <span class="flower-prices">₱ 300</span>
                     </div>
                 </div>
                 <div class="flower-image" id="right">
                     <img src="flower7.jpeg" alt="Assorted Bouquet 1" loading="lazy">
                     <div class="child">
-                    <h3>
-                      Assorted Bouquet 1
-                    </h3>
-                    <p>
-                      Assorted Flower Bouquet - Type 1
-                    </p>
+                        <h3>Assorted Bouquet 1</h3>
+                        <p>Assorted Flower Bouquet - Type 1</p>
+                        <span class="flower-prices">₱ 200-350</span>
                     </div>
                 </div>
                 <div class="flower-image" id="right">
                     <img src="flower8.jpeg" alt="Assorted Bouquet 2" loading="lazy">
                     <div class="child">
-                    <h3>
-                      Assorted Bouquet 2
-                    </h3>
-                    <p>
-                      Assorted Flower Bouquet Type 2
-                    </p>
+                        <h3>Assorted Bouquet 2</h3>
+                        <p>Assorted Flower Bouquet Type 2</p>
+                        <span class="flower-prices">₱ 200-350</span>
                     </div>
                 </div>
-              </div>
             </div>
         </section>
-
 
         <section id="why-section">
             <h2>Why Choose Us?</h2>
             <div class="why-container">
-            <ul> 
-                  <li>
-                    <img class="why-logo" src="needle.png" alt="Handcrafted" loading="lazy" style="width: 100px; height:60px;">
-                    <p>
-                      Handcrafted with love in Quezon City.
-                    </p>
-                  </li>
-                <li>
-                  <img class="why-logo" src="value.png" alt="Unique" loading="lazy" style="width: 100px; height:60px;">
-                  <p>
-                    Unique designs, fast local delivery.
-                  </p>
-                  </li>
-                <li>
-                  <img class="why-logo" src="affordable.png" alt="Affordable" loading="lazy" style="width: 100px; height:60px;">
-                  <p>
-                     Affordable prices via social media orders.
-                  </p>
-                  </li>
-            </ul>
-          </div>
+                <ul> 
+                    <li>
+                        <img class="why-logo" src="needle.png" alt="Handcrafted" loading="lazy" style="width: 100px; height:60px;">
+                        <p>Handcrafted with love in Quezon City.</p>
+                    </li>
+                    <li>
+                        <img class="why-logo" src="value.png" alt="Unique" loading="lazy" style="width: 100px; height:60px;">
+                        <p>Unique designs, fast local delivery.</p>
+                    </li>
+                    <li>
+                        <img class="why-logo" src="affordable.png" alt="Affordable" loading="lazy" style="width: 100px; height:60px;">
+                        <p>Affordable prices via social media orders.</p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
-    
         <section id="feedback-section">
             <h2>Customer Feedback</h2>
             <table>
@@ -210,96 +186,50 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="Name">
-                          Charlene
-                          </td>
-                        <td data-label="Feedback">
-                     Hi po, super pretty po ng flower na gawa mo, o-order po ulit ako sa susunod, have a Blessed Sunday po!
-                    </td>
+                        <td data-label="Name">Charlene</td>
+                        <td data-label="Feedback">Hi po, super pretty po ng flower na gawa mo, o-order po ulit ako sa susunod, have a Blessed Sunday po!</td>
                     </tr>
                     <tr>
-                        <td data-label="Name">
-                          Michaella
-                          </td>
-                        <td data-label="Feedback">
-                          Hindi lang ako nagandahan sa bouquet ninyo po, pero sobrang, sobrang nagustuhan ko talaga!!! Sobrang pareho talaga sa kung paano ko siya in-imagine na magiging itsura.
-​                    Tiyak na dito ulit ako                    oorder sa shop ninyo                     po tuwing kailangan ko                    ng bouquet ulit!💜💜💜
-                        </td>
+                        <td data-label="Name">Michaella</td>
+                        <td data-label="Feedback">Hindi lang ako nagandahan sa bouquet ninyo po, pero sobrang, sobrang nagustuhan ko talaga!!! Sobrang pareho talaga sa kung paano ko siya in-imagine na magiging itsura. Tiyak na dito ulit ako oorder sa shop ninyo po tuwing kailangan ko ng bouquet ulit!💜💜💜</td>
                     </tr>
                     <tr>
-                        <td data-label="Name">
-                          Jennifer
-                          </td>
-                        <td data-label="Feedback">
-                    Maganda at nagustuhan ng anak ko. Looks elegant and I love the color.
-                    </td>
+                        <td data-label="Name">Jennifer</td>
+                        <td data-label="Feedback">Maganda at nagustuhan ng anak ko. Looks elegant and I love the color.</td>
                     </tr>
                     <tr>
-                        <td data-label="Name">
-                          Anikka
-                        </td>
-                        <td data-label="Feedback">
-                     Sofer ganda ma’am and sofer bilis lang gawin kala ko matagal sya gawin haha, i might buy again next time!❤️😍
-                        </td>
+                        <td data-label="Name">Anikka</td>
+                        <td data-label="Feedback">Sofer ganda ma'am and sofer bilis lang gawin kala ko matagal sya gawin haha, i might buy again next time!❤️😍</td>
                     </tr>
                     <tr>
-                      <td data-label="Name">
-                      Dae
-                      </td>
-                      <td data-label="Feedback">
-                     Nagustuhan niya raw po sobra 🫶 first time niya pong maka-receive ng big bouquet (kudos po sa pag-arrange niyo po) plus maganda raw po 'yung colors 🥹
-
-                     ang galing daw po ng crafter hehe kaya deserve niyo po ng tip kahit maliit lang po hehe 🫶
-                      </td>
+                        <td data-label="Name">Dae</td>
+                        <td data-label="Feedback">Nagustuhan niya raw po sobra 🫶 first time niya pong maka-receive ng big bouquet (kudos po sa pag-arrange niyo po) plus maganda raw po 'yung colors 🥹 ang galing daw po ng crafter hehe kaya deserve niyo po ng tip kahit maliit lang po hehe 🫶</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-       
         <section id="contact-section">
-          <h2>
-            Contact Us
-          </h2>
-          <div class="contact-container">
-            <p>
-              &#128233; Direct Message us on Facebook or Instagram @ZiannaMnl
-            </p>
-            <div>
-            <a href="https://www.facebook.com/ziannamnl/?_rdr">
-              <img src="facebook-logo.png" alt="Facebook">
-            </a>
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <p>&#128233; Direct Message us on Facebook or Instagram <span>@ZiannaMnl</span></p>
+                <div>
+                    <a href="https://www.facebook.com/ziannamnl/?_rdr">
+                        <img src="facebook-logo.png" alt="Facebook" target="_blank" rel="noopener noreferrer">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/zianna.mnl/?igsh=bTFycWR2dnUwZzN3#">
+                        <img src="instagram-logo.png" alt="Instagram" target="_blank" rel="noopener noreferrer">
+                    </a>
+                </div>
             </div>
-            <div>
-            <a href="https://www.instagram.com/zianna.mnl/?igsh=bTFycWR2dnUwZzN3#">
-              <img src="instagram-logo.png" alt="Instagram">
-            </a>
-            </div>
-          </div>
         </section>
 
-        <footer>
-           <p class="copyright">&copy; <b>2025 Zianna Mnl</b> | All rights reserved</p>
+        <footer class="footer">
+            <p class="copyright">&copy; <span>2025 Zianna Mnl</span> | All rights reserved</p>
         </footer>
-
     </main>
-    
-  <script>
-const navLinks = document.querySelectorAll(".nav-links a");
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            const targetId = link.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                const aniElements = targetSection.querySelectorAll(".logo, .about-content, #left, #right, h2, .product-section, .product-text, table, .contact-container, .copyright, .why-container, #playPauseBtn,#theme-toggle");
-                aniElements.forEach(el => {
-                    el.style.animation = "none";
-                    void el.offsetWidth;
-                    el.style.animation = "";
-                });
-            }
-        });
-    });
-</script>
+<script src="flower.js"></script>
 </body>
 </html>
