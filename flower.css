@@ -321,6 +321,37 @@ h2 {
     max-width: 1200px;
 }
 
+.image-slide {
+   display: grid;
+   grid-auto-flow: column;
+   grid-auto-columns: 20rem;
+   gap: 1.5rem;
+   justify-content: stretch;
+   padding: 5px;
+   box-shadow: 0 0 20px var(--dark);
+   border-top: 10px solid var(--dark);
+   border-bottom: 10px solid var(--dark);
+   animation: animate 40s linear infinite;
+   will-change: transform;
+}
+
+.image-slide img {
+  width: 20rem;
+  height: 15rem; 
+  object-fit: cover; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-8 * (20rem + 1.5rem)));
+  }
+}
+
 .flower-image {
     padding: 25px;
     background: var(--white);
@@ -768,6 +799,16 @@ span {
     box-shadow: 0 12px 36px rgba(255, 255, 255, 0.3);
 }
 
+[data-theme="dark"] .image-slide {
+  box-shadow: 0 0 20px var(--white);
+  border-top: 10px solid var(--white);
+  border-bottom: 10px solid var(--white);
+}
+
+[data-theme="dark"] .image-slide {
+  box-shadow: 0 0 10px var(--white);
+}
+
 [data-theme="dark"] .flower-image {
     background: var(--dark);
     box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
@@ -909,6 +950,12 @@ span {
         color: var(--white);
         border: 2px solid var(--white);
     }
+    
+    [data-theme="dark"] .image-slide {
+    box-shadow: 0 0 20px var(--white);
+    border-top: 5px solid var(--white);
+    border-bottom: 5px solid var(--white);
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -1106,6 +1153,30 @@ span {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1rem;
     }
+    
+    .image-slide {
+    grid-auto-columns: 16rem;
+    gap: 1rem;
+    animation: animate-mobile 30s linear infinite;
+    border-top: 5px solid var(--dark);
+    border-bottom: 5px solid var(--dark);
+    will-change: transform;
+  }
+  
+  .image-slide img {
+    width: 16rem;
+    height: 12rem;
+    border-radius: 0.375rem;
+  }
+  
+  @keyframes animate-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-8 * (16rem + 1rem)));
+    }
+  }
 
     .flower-image {
         padding: 1rem;

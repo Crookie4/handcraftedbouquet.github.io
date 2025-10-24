@@ -27,3 +27,7 @@ const savedTheme = localStorage.getItem('theme') || 'light';
                 }
             });
         });
+  
+const slider = document.getElementById('imageSlide');
+const images = slider.innerHTML;
+slider.innerHTML += images;
