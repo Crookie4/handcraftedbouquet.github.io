@@ -1,4 +1,4 @@
-document.getElementById('playPauseBtn').addEventListener('click', function() {
+document.getElementById('#playPauseBtn').addEventListener('click', function() {
     const audio = document.getElementById('myAudio');
     audio.play().catch(error => {
         console.log('Audio playback failed:', error);
