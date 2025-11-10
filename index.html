@@ -239,6 +239,24 @@
             <p class="copyright">&copy; <span>2025 Zianna Mnl</span> | All rights reserved</p>
         </footer>
     </main>
+<script>
+ const navLinks = document.querySelectorAll(".nav-links a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                const targetId = link.getAttribute("href");
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const aniElements = targetSection.querySelectorAll(".logo, .about-content, #left, #right, h2, .product-section, .product-text, table, .contact-container, .copyright, .why-container, #playPauseBtn, #theme-toggle");
+                    aniElements.forEach(el => {
+                        el.style.animation = "none";
+                        void el.offsetWidth;
+                        el.style.animation = "";
+                    });
+                }
+            });
+        }); 
+  
+</script>
 <script src="flower.js"></script>
 </body>
 </html>
